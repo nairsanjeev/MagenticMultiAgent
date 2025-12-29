@@ -10,7 +10,7 @@ A sophisticated multi-agent AI system built with Azure OpenAI, Agent Framework, 
   - 🔎 **Reviewer**: Critical quality assurance and validation
   - 🎯 **Manager**: Orchestrates agent collaboration and synthesizes reports
 
-- **Flexible Model Selection**: Choose different GPT models (GPT-4o, GPT-4o Mini, GPT-4 Turbo, GPT-3.5 Turbo) for each agent
+- **Flexible Model Selection**: Choose different GPT models  for each agent
 - **Real-time Activity Logging**: Watch agents collaborate in real-time
 - **CopilotKit Integration**: AI-powered chat interface
 - **Pre-loaded Examples**: ML model analysis, market research, financial calculations, technical comparisons
