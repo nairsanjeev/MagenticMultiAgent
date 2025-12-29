@@ -1,0 +1,463 @@
+.magentic-workflow {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Agents Card */
+.agents-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.agents-card h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.agents-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.agent-badge {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.agent-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.agent-badge.researcher {
+  background: linear-gradient(135deg, #667eea20 0%, #764ba220 100%);
+  border: 2px solid #667eea;
+}
+
+.agent-badge.coder {
+  background: linear-gradient(135deg, #f093fb20 0%, #f5576c20 100%);
+  border: 2px solid #f093fb;
+}
+
+.agent-badge.reviewer {
+  background: linear-gradient(135deg, #fbc2eb20 0%, #a6c1ee20 100%);
+  border: 2px solid #a6c1ee;
+}
+
+.agent-badge.manager {
+  background: linear-gradient(135deg, #4facfe20 0%, #00f2fe20 100%);
+  border: 2px solid #4facfe;
+}
+
+.agent-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.agent-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.agent-name {
+  font-weight: 600;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.agent-role {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.model-select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  background: white;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.model-select:hover:not(:disabled) {
+  border-color: #667eea;
+}
+
+.model-select:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Task Section */
+.task-section {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.task-section h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.task-input {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+  transition: border-color 0.3s;
+}
+
+.task-input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.execute-btn {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.execute-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.execute-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Examples Section */
+.examples-section {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.examples-section h3 {
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.examples-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.example-card {
+  padding: 1.5rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.example-card:hover {
+  border-color: #667eea;
+  background: #f8f9ff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.example-card h4 {
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.example-card p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Status Cards */
+.status-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+}
+
+.status-card.loading {
+  background: #fff3cd;
+  border: 2px solid #ffc107;
+  color: #856404;
+}
+
+.status-card.error {
+  background: #f8d7da;
+  border: 2px solid #dc3545;
+  color: #721c24;
+}
+
+/* Results Section */
+.result-section {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.result-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #28a745;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.result-content {
+  background: #f8f9fa;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.result-content pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: 'Courier New', monospace;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+}
+
+.new-task-btn {
+  padding: 0.75rem 2rem;
+  background: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.new-task-btn:hover {
+  background: #5a6268;
+}
+
+/* Activity Log Section */
+.activity-log-section {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: 2px solid #667eea;
+}
+
+.activity-log-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.activity-log-header h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #333;
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.toggle-log-btn {
+  padding: 0.5rem 1rem;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.toggle-log-btn:hover {
+  background: #5568d3;
+}
+
+.activity-log-content {
+  max-height: 400px;
+  overflow-y: auto;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 1rem;
+  background: #f8f9fa;
+}
+
+.activity-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  border-radius: 8px;
+  background: white;
+  border-left: 4px solid #667eea;
+  transition: transform 0.2s;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.activity-item:hover {
+  transform: translateX(4px);
+}
+
+.activity-item.researcher {
+  border-left-color: #667eea;
+  background: linear-gradient(90deg, #667eea10 0%, white 100%);
+}
+
+.activity-item.coder {
+  border-left-color: #f093fb;
+  background: linear-gradient(90deg, #f093fb10 0%, white 100%);
+}
+
+.activity-item.reviewer {
+  border-left-color: #a6c1ee;
+  background: linear-gradient(90deg, #a6c1ee10 0%, white 100%);
+}
+
+.activity-item.manager {
+  border-left-color: #4facfe;
+  background: linear-gradient(90deg, #4facfe10 0%, white 100%);
+}
+
+.activity-item.system {
+  border-left-color: #6c757d;
+  background: linear-gradient(90deg, #6c757d10 0%, white 100%);
+}
+
+.activity-item.success {
+  border-left-color: #28a745;
+  background: linear-gradient(90deg, #28a74510 0%, white 100%);
+}
+
+.activity-item.error {
+  border-left-color: #dc3545;
+  background: linear-gradient(90deg, #dc354510 0%, white 100%);
+}
+
+.activity-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.activity-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.activity-message {
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.activity-timestamp {
+  color: #666;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .agents-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .examples-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .magentic-workflow {
+    gap: 1rem;
+  }
+  
+  .agents-card,
+  .task-section,
+  .examples-section,
+  .result-section,
+  .activity-log-section {
+    padding: 1.5rem;
+  }
+  
+  .activity-log-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
